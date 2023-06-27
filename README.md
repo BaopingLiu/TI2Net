@@ -9,6 +9,10 @@ This is the official implementation of the paper: [TI2Net: Temporal Identity Inc
 
 # Model training and evaluation
 
+* Evaluation
+
+* Training
 
 
-# To Do list
+
+# To-Do list
