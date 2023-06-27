@@ -3,6 +3,10 @@ This is the official implementation of our WACV2023 paper: [TI2Net: Temporal Ide
 
 We referred much to the source code of [arcface](https://github.com/ronghuaiyang/arcface-pytorch/tree/master) and [LRNet](https://github.com/frederickszk/LRNet)
 
+
+# Overview
+
+
 # Data pre-processing
 * Frame extraction and face cropping
 
