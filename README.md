@@ -9,7 +9,7 @@ We referred much to the source code of [arcface](https://github.com/ronghuaiyang
 
 # Data pre-processing
 * Frame extraction and face cropping
-  * Frame extraction script is mainly based on the script provided by [FaceForensics++](https://github.com/ondyari/FaceForensics)
+  * Frame extraction script is mainly based on the script provided by [FaceForensics++](https://github.com/ondyari/FaceForensics). We combine the script with Dlib to achieve frame extraction and cropping at once.
 
 * Identity calculation
 
