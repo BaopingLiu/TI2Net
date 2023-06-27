@@ -27,9 +27,9 @@ We referred much to the source code of [arcface](https://github.com/ronghuaiyang
 
 # Citaton
 @inproceedings{liu2023ti2net,
-  title={TI2Net: Temporal Identity Inconsistency Network for Deepfake Detection},
-  author={Liu, Baoping and Liu, Bo and Ding, Ming and Zhu, Tianqing and Yu, Xin},
-  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
-  pages={4691--4700},
-  year={2023}
+  title={TI2Net: Temporal Identity Inconsistency Network for Deepfake Detection}, <br>
+  author={Liu, Baoping and Liu, Bo and Ding, Ming and Zhu, Tianqing and Yu, Xin}, <br>
+  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},<br>
+  pages={4691--4700},<br>
+  year={2023}<br>
 }
