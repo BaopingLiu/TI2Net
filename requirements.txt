@@ -1,0 +1,4 @@
+dlib==19.24.0
+scikit-learn==1.0.2
+torch==1.12.1
+torchvision==0.13.1
