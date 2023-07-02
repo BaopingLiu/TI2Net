@@ -20,7 +20,7 @@ We referred much to the source code of [arcface](https://github.com/ronghuaiyang
 
 * Evaluation: 
 
-* Training:
+* Training:  
   For hardware limitations, our experiments are conducted in a two-stage manner, which includes: 1). Off-line identity extraction  and saving.  2). Identity loading and training. Both of these steps are accomplished in [demo_offline_id.ipynb](demo_offline_id.ipynb)
   * Identity Extraction: 
 
