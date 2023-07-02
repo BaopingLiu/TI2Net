@@ -11,7 +11,7 @@ We referred much to the source code of [arcface](https://github.com/ronghuaiyang
 * Frame extraction and face cropping
   * Frame extraction script is mainly based on the script provided by [FaceForensics++](https://github.com/ondyari/FaceForensics). We combine the script with Dlib to achieve frame extraction and cropping at once. You can find the processing in the [data_preprocessing.ipynb](data_preprocessing.ipynb), which contains the processing of various datasets in our experiments. The required pre-trained landmark detector model can be found [here](https://drive.google.com/file/d/1zvKD-66Ye_g6qn9LvBuTSrT8ND-MU1aD/view?usp=drive_link), download it and place it in the **utils** folder
 
-* Bad examples in the FF++ dataset:
+* **Bad examples** in the FF++ dataset:
    While detecting human faces from videos, we found some videos that could not be smoothly processed by the face detector and our coding; we list them here so that other researchers can avoid the  noise  from these bad examples in their research works. 
   * Video_281: The target face is not the largest detected face in video frames. Manually select the target face from  detected faces.
   * Video_344: There are Two equally large faces, so we need to manually select target faces frame-by-frame.
