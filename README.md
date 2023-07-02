@@ -39,8 +39,8 @@ We referred much to the source code of [arcface](https://github.com/ronghuaiyang
 
 # To-Do list
 * - [x] Table of bad examples in datasets.
-* - [ ] Release extracted ID vectors.- [ ]
-* - [ ] Release pre-trained model.- [ ]
+* - [ ] Release extracted ID vectors.
+* - [ ] Release pre-trained model.
 
 
 # Citaton
