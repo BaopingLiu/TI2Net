@@ -23,6 +23,8 @@ We referred much to the source code of [arcface](https://github.com/ronghuaiyang
 
 
 # To-Do list
+* Release extracted ID vectors
+* Release pre-trained model
 
 
 # Citaton
