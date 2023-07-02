@@ -26,7 +26,7 @@ We referred much to the source code of [arcface](https://github.com/ronghuaiyang
   * 2). Identity loading and training: This is the second part of demo_offline_id.ipynb.
  
  * Evaluation:
-   This is the third part of demo_offline_id.ipynb.
+   Commands can be found in the third part of demo_offline_id.ipynb.
 
 
 
