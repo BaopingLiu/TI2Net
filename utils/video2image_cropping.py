@@ -70,12 +70,11 @@ def frameExtraction(videoPath, face_path, rand=False, fpv=-1):
 	fpv: frames per videoo
 	"""
 	filename = videoPath.split("/")[-1].split(".")[0]
-	cap = cv2.VideoCapture(str(videoPath)) # 读取视频文件
-	#获取帧号
+	cap = cv2.VideoCapture(str(videoPath)) 
 	frames_num=cap.get(7)
 	frameList = []
     
-	if fpv == -1:#提取全部帧
+	if fpv == -1:
 		frameList = range(int(frames_num))
 	else:
 		if rand:
@@ -89,25 +88,12 @@ def frameExtraction(videoPath, face_path, rand=False, fpv=-1):
         
 	for frameNum in frameList:			
 		cap.set(cv2.CAP_PROP_POS_FRAMES, float(frameNum))
-		if cap.isOpened(): #判断是否正常打开
+		if cap.isOpened(): 
 			rval , frame = cap.read() 
 			if not os.path.exists(face_path):
 				os.mkdir(face_path)
 			cropSingleFace(frame, face_path, frameNum)
 	cap.release()
-
-"""
-def main():
-	args = parse.parse_args()
-	inputPath = args.globPath
-	label = args.label_path
-	full_image_path = args.full_image_path
-	face_image_path = args.face_image_path
-	video_label_dict = DFDC_label_processing(label)
-	for i in tqdm(glob.glob(inputPath+"/*.mp4")[11:]):
-		print("current-", i)
-		frameExtraction(i, full_image_path, face_image_path, video_label_dict)
-"""
 
 
 def extract_method_videos(data_path, subset, compression):
@@ -178,78 +164,4 @@ if __name__ == '__main__':
 			for video in video_list:
  				image_folder = video.split('.')[0]
  				frameExtraction(os.path.join(i, video),
-                            os.path.join(image_path_list[idx], image_folder))            
-        
-        
-            
-            
-        
-        
-        
-        
-        
-        
-    
-    
-    
-	"""
-	if args.mode == "crop":
-		set_path = args.set_path
-		out_put_path = os.path.join(set_path, "face_images")
-		if not os.path.exists(out_put_path):
-			os.mkdir(out_put_path)
-		video_list = os.listdir(full_imgs_path)
-		video_list.sort()
-		print("videos", video_list)
-		for video in tqdm(video_list):
-			flag = False
-			video_path = os.path.join(full_imgs_path, video)
-			print("video", video)
-			out_video_path = os.path.join(out_put_path, video)
-			if not os.path.exists(out_video_path):
-				os.mkdir(out_video_path)
-			frame_list = os.listdir(video_path)
-			frame_list.sort()
-			for frame in frame_list:
-				img_path = os.path.join(video_path, frame)
-				img = cv2.imread(img_path)
-				frame_num = frame.split(".")[0]
-				out_put = os.path.join(out_video_path, frame_num)
-				res = cropSingleFace(img, out_put)
-				if res:
-					flag = True
-			if flag:
-				print(video_path, " has multiple faces")
-    """
-				
-#python video2image_cropping.py --mode="crop" --set_path="/media/baoping/15611681023/FaceForensics++/manipulated_sequences/Face2Face/c40"        
-	#CelebDF()
-	
-	
-	
-	#for i in glob.glob("G:/FaceForensics++/original_sequences/youtube/c23/videos/*.mp4"):
-	#	frameExtraction(i, "E:/", fpv=frame_per_video)
-		
-	"""
-	for j in glob.glob("G:/FaceForensics++/manipulated_sequences/Deepfakes/*/*/*.mp4"):
-		manipulation = j.split("\\")[-4]
-		frameExtraction(j, "G:/FaceForensics++/100fpv/Extracted/manipulated/"+"Deepfakes", fpv=frame_per_video)
-		
-	for k in glob.glob("G:/FaceForensics++/manipulated_sequences/FaceSwap/*/*/*.mp4"):
-		manipulation = k.split("\\")[-4]
-		frameExtraction(k, "G:/FaceForensics++/100fpv/Extracted/manipulated/"+"FaceSwap", fpv=frame_per_video)
-	
-	for l in glob.glob("G:/FaceForensics++/manipulated_sequences/Face2Face/*/*/*.mp4"):
-		manipulation = l.split("\\")[-4]
-		frameExtraction(l, "G:/FaceForensics++/100fpv/Extracted/manipulated/"+"Face2Face", fpv=frame_per_video)
-	
-	for m in glob.glob("G:/FaceForensics++/manipulated_sequences/NeuralTextures/*/*/*.mp4"):
-		manipulation = m.split("\\")[-4]
-		frameExtraction(m, "G:/FaceForensics++/100fpv/Extracted/manipulated/"+"NeuralTextures", fpv=frame_per_video)
-	"""
-	#python video2image_cropping.py --mode="crop" --stoppoint=50  --set_path="/media/baoping/SGHDD/FaceForensics++/original_sequences/youtube/c40"
-	
-	
-	
-	
-	
+                            os.path.join(image_path_list[idx], image_folder))	
