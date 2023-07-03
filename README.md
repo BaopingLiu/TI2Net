@@ -14,7 +14,7 @@ We referred much to the source code of [arcface](https://github.com/ronghuaiyang
 * **Bad examples** in the FF++ dataset:
    While detecting human faces from videos, we found some videos that could not be smoothly processed by the face detector and our coding; we list them here so that other researchers can avoid the  noise  from these bad examples in their research works. 
   * Video_281: The target face is not the largest detected face in video frames. Manually select the target face from  detected faces.
-  * Video_344: There are Two equally large faces, so we need to manually select target faces frame-by-frame.
+  * Video_344: There are two equally large faces, so we need to manually select target faces frame-by-frame.
   * Video_356：From the 3rd second on, a long part of the video contains no human face.
   * Video_370: From the 7th-9th second, a camera switching part contains no human face.
   * Video_492: There are Two equally large faces, so we need to manually select target faces frame-by-frame.
