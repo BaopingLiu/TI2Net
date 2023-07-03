@@ -10,11 +10,18 @@ We referred much to the source code of [arcface](https://github.com/ronghuaiyang
 # Data pre-processing
 * Frame extraction and face cropping
   * Frame extraction script is mainly based on the script provided by [FaceForensics++](https://github.com/ondyari/FaceForensics). We combine the script with Dlib to achieve frame extraction and cropping at once. You can find the processing in the [data_preprocessing.ipynb](data_preprocessing.ipynb), which contains the processing of various datasets in our experiments. The required pre-trained landmark detector model can be found [here](https://drive.google.com/file/d/1zvKD-66Ye_g6qn9LvBuTSrT8ND-MU1aD/view?usp=drive_link), download it and place it in the **utils** folder
-  * Note that there are also some manual works to improve the quality of the extracted human faces.
 
-
-   
-
+* **Bad examples** in the FF++ dataset:
+   While detecting human faces from videos, we found some videos that could not be smoothly processed by the face detector and our coding; we list them here so that other researchers can avoid the  noise  from these bad examples in their research works. 
+  * Video_281: The target face is not the largest detected face in video frames. Manually select the target face from  detected faces.
+  * Video_344: There are Two equally large faces, so we need to manually select target faces frame-by-frame.
+  * Video_356：From the 3rd second on, a long part of the video contains no human face.
+  * Video_370: From the 7th-9th second, a camera switching part contains no human face.
+  * Video_492: There are Two equally large faces, so we need to manually select target faces frame-by-frame.
+  * Video_509: There is a long part of camera switching, and some frames do not contain human faces
+  * Video_738: At around the 10th second, there is a camera switching, and there are multiple equally large faces, so we need to manually select target faces frame-by-frame.
+  * Video_908: There is a camera switching at about the 13th second.
+  * Video_950: Camera defocused at about 23rd second and human faces cannot be detected here.
 
 # Model training and evaluation
 
@@ -31,16 +38,16 @@ We referred much to the source code of [arcface](https://github.com/ronghuaiyang
 
 
 # To-Do list
-* Table of bad examples in datasets.
-* Release extracted ID vectors
-* Release pre-trained model
+* - [x] Table of bad examples in datasets.
+* - [ ] Release extracted ID vectors.
+* - [ ] Release pre-trained model.
 
 
 # Citaton
-@inproceedings{liu2023ti2net,
-  title={TI2Net: Temporal Identity Inconsistency Network for Deepfake Detection}, <br>
-  author={Liu, Baoping and Liu, Bo and Ding, Ming and Zhu, Tianqing and Yu, Xin}, <br>
-  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},<br>
-  pages={4691--4700},<br>
-  year={2023}<br>
+@inproceedings{liu2023ti2net,  
+     title={TI2Net: Temporal Identity Inconsistency Network for Deepfake Detection}, <br>
+     author={Liu, Baoping and Liu, Bo and Ding, Ming and Zhu, Tianqing and Yu, Xin}, <br>
+     booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},<br>
+     pages={4691--4700},<br>
+     year={2023}<br>
 }
