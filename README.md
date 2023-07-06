@@ -41,7 +41,7 @@ We referred much to the source code of [arcface](https://github.com/ronghuaiyang
 * - [x] Table of bad examples in datasets.
 * - [ ] Release extracted ID vectors.
 * - [ ] Release pre-trained model.
-
+  - [ ] Update BaiduPan links for pre-trained models
 
 # Citaton
 @inproceedings{liu2023ti2net,  
